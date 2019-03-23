@@ -1,0 +1,49 @@
+<div class = "container">
+    <div class = "row">
+        <div class = "col-12">
+            <h1>Welcome to Burgerville!</h1>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-6">
+            <h2>Burgers to be Eaten: </h2>
+            <ul class = "list-group">
+                {{#each burger}}
+                    {{#unless devoured}}
+                    <li class = "list-group-item" id = "{{id}}">{{burger_name}} <button data-value ="{{id}}" class = "devour">Eat Me!</button></li>
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class = "col-6">
+            <h2>Burgers Already Eaten: </h2>
+            <ul class = "list-group">
+                {{#each burger}}
+                    {{#if beenEaten}}
+                    <li class = "list-group-item" id = "{{id}}">{{burger_name}} 
+                        {{#if devoured}}
+                        <button data-value ="{{id}}" class = "revive">Make Me Again!</button>
+                        {{/if}}
+                        <div class = "row">
+                            <small>Burgers Eaten: {{eaten}}</small>
+                        </div>
+                    </li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-12">
+            <h5>Make a New Burger</h5>
+            <form>
+                <div class="form-group">
+                    <label for="new-burger">Burger Name</label>
+                    <input type="text" class="form-control" id="new-burger" placeholder="Name Your Burger" >
+                </div>
+                <button class="btn btn-primary" id = "add-burger">Add Burger</button>
+            </form>
+        </div>
+        
+    </div>
+</div>

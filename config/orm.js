@@ -18,8 +18,10 @@ const orm = {
         })
     }, 
     updateOne : function(burger,id,callback) {
-        connection.query(`UPDATE burgers SET devoured = ?, eaten = ?
-                        WHERE id = ?`,[burger.devoured,burger.eaten,id],function(error,results) {
+        const query = `UPDATE burgers SET devoured = ?, eaten = ${burger.eaten}
+        WHERE id = ?`;
+        console.log(query);
+        connection.query(query,[burger.devoured,id],function(error,results) {
             if (error) {
                 return callback(error);
             }
