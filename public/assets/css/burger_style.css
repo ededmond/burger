@@ -1,3 +1,62 @@
+.body {
+    width : 100%;
+}
+
+.fries {
+    z-index : -1;
+    position: fixed;
+    top: 0;
+    width : 1600px;
+}
+.left {
+    left : 0;
+}
+.right {
+    right : 0;
+}
+
+.yellow {
+    background-color: rgb(255, 187, 61);
+    font-family: 'Germania One', cursive;
+}
+.container {
+    margin-top: 20px;
+}
+h1 {
+    text-align: center;
+    background-color:red;
+    color: yellow;
+    border-radius : 10px;
+    padding:10px;
+}
+.menu {
+    margin: 20px;
+    text-align: center;
+    background-color:red;
+    color: yellow;
+    border-radius : 10px;
+    padding:10px;
+}
+li {
+    color: black;
+    text-align : left;
+    background-color: rgb(255, 187, 61) !important;
+}
+small {
+    font-family:'Courier New', Courier, monospace;
+}
+
 .revive, .devour {
     float: right;
+}
+
+.add {
+    background-color: red;
+    border-radius : 10px;
+}
+.add2 {
+    padding : 20px;
+}
+form {
+    font-family : 'Courier New', Courier, monospace;
 }
